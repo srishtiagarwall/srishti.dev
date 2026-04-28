@@ -1,12 +1,15 @@
 :root {
-  --background: #0d1117;
-  --foreground: #c9d1d9;
-  --accent: #57f287;
-  --accent-glow: rgba(87, 242, 135, 0.2);
-  --comment: #8b949e;
-  --card-bg: #161b22;
-  --card-border: #30363d;
-  --code-bg: rgba(110, 118, 129, 0.1);
+  --background: #050505;
+  --foreground: #e2e8f0;
+  --accent: #00f0ff;
+  --accent-secondary: #7000ff;
+  --accent-glow: rgba(0, 240, 255, 0.15);
+  --secondary-glow: rgba(112, 0, 255, 0.15);
+  --comment: #64748b;
+  --card-bg: rgba(255, 255, 255, 0.02);
+  --card-border: rgba(255, 255, 255, 0.05);
+  --card-border-hover: rgba(255, 255, 255, 0.15);
+  --code-bg: rgba(0, 0, 0, 0.4);
   --font-inter: 'Inter', sans-serif;
   --font-fira-code: 'Fira Code', monospace;
 }
@@ -30,6 +33,10 @@ body {
   font-family: var(--font-inter);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: 
+    radial-gradient(circle at 15% 50%, var(--secondary-glow), transparent 25%),
+    radial-gradient(circle at 85% 30%, var(--accent-glow), transparent 25%);
+  background-attachment: fixed;
 }
 
 * {
