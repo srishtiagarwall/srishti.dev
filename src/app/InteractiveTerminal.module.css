@@ -1,0 +1,107 @@
+.terminalContainer {
+  background: var(--code-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px var(--shadow-color);
+  font-family: var(--font-fira-code);
+  font-size: 0.9rem;
+  width: 100%;
+  margin: 2rem 0;
+  backdrop-filter: blur(10px);
+  cursor: text !important;
+}
+
+.terminalHeader {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.macButtons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.macButtons span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.macRed { background: #ff5f56; }
+.macYellow { background: #ffbd2e; }
+.macGreen { background: #27c93f; }
+
+.terminalTitle {
+  flex-grow: 1;
+  text-align: center;
+  color: var(--comment);
+  font-size: 0.8rem;
+  margin-right: 42px;
+}
+
+.terminalBody {
+  padding: 1.5rem;
+  height: 350px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: var(--foreground);
+}
+
+.promptLine {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 0.25rem;
+}
+
+.prompt {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.outputLine {
+  color: var(--foreground);
+  margin-bottom: 1rem;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  line-height: 1.5;
+}
+
+.inputForm {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.input {
+  flex-grow: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--foreground);
+  font-family: var(--font-fira-code);
+  font-size: 0.9rem;
+}
+
+/* Scrollbar customization */
+.terminalBody::-webkit-scrollbar {
+  width: 8px;
+}
+
+.terminalBody::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.terminalBody::-webkit-scrollbar-thumb {
+  background: var(--card-border);
+  border-radius: 4px;
+}
+
+.terminalBody::-webkit-scrollbar-thumb:hover {
+  background: var(--comment);
+}

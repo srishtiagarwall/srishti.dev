@@ -1,0 +1,23 @@
+.graphContainer {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 2rem 0;
+  backdrop-filter: blur(10px);
+  overflow-x: auto;
+  transition: all 0.3s ease;
+}
+
+.graphContainer:hover {
+  border-color: var(--card-border-hover);
+  box-shadow: 0 10px 40px -10px var(--shadow-color), inset 0 0 0 1px var(--accent-glow);
+}
+
+.note {
+  font-size: 0.8rem;
+  color: var(--comment);
+  margin-top: 1rem;
+  font-style: italic;
+  font-family: var(--font-fira-code);
+}

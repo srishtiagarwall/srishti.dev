@@ -3,6 +3,8 @@ import ThemeToggle from "./ThemeToggle";
 import Typewriter from "./Typewriter";
 import TiltCard from "./TiltCard";
 import CommandPalette from "./CommandPalette";
+import InteractiveTerminal from "./InteractiveTerminal";
+import GithubGraph from "./GithubGraph";
 
 export default function Home() {
   return (
@@ -61,6 +63,9 @@ export default function Home() {
         {/* Skills Section */}
         <section id="skills" className={styles.section}>
           <h2 className={styles.sectionTitle}>skills</h2>
+          
+          <InteractiveTerminal />
+
           <div className={styles.grid}>
             <TiltCard className={styles.card}>
               <h3 className={styles.cardTitle}>Languages</h3>
@@ -105,6 +110,12 @@ export default function Home() {
               </div>
             </TiltCard>
           </div>
+        </section>
+
+        {/* Open Source Section */}
+        <section id="open-source" className={styles.section}>
+          <h2 className={styles.sectionTitle}>open source</h2>
+          <GithubGraph />
         </section>
 
         {/* Experience Section */}
