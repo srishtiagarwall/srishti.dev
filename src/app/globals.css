@@ -21,27 +21,25 @@
   --font-fira-code: 'Fira Code', monospace;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --background: #f8fafc;
-    --foreground: #0f172a;
-    --accent: #0284c7;
-    --accent-secondary: #7c3aed;
-    --accent-glow: rgba(2, 132, 199, 0.15);
-    --secondary-glow: rgba(124, 58, 237, 0.15);
-    --comment: #475569;
-    --card-bg: rgba(255, 255, 255, 0.7);
-    --card-border: rgba(15, 23, 42, 0.08);
-    --card-border-hover: rgba(15, 23, 42, 0.2);
-    --code-bg: rgba(15, 23, 42, 0.05);
-    --nav-bg: rgba(248, 250, 252, 0.8);
-    --shadow-color: rgba(15, 23, 42, 0.15);
-    --shadow-light: rgba(15, 23, 42, 0.05);
-    --text-shadow: rgba(15, 23, 42, 0.3);
-    --impact-bg: rgba(124, 58, 237, 0.08);
-    --impact-border: rgba(124, 58, 237, 0.3);
-    --impact-text: #6d28d9;
-  }
+:root[data-theme="light"] {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --accent: #0284c7;
+  --accent-secondary: #7c3aed;
+  --accent-glow: rgba(2, 132, 199, 0.15);
+  --secondary-glow: rgba(124, 58, 237, 0.15);
+  --comment: #475569;
+  --card-bg: rgba(255, 255, 255, 0.7);
+  --card-border: rgba(15, 23, 42, 0.08);
+  --card-border-hover: rgba(15, 23, 42, 0.2);
+  --code-bg: rgba(15, 23, 42, 0.05);
+  --nav-bg: rgba(248, 250, 252, 0.8);
+  --shadow-color: rgba(15, 23, 42, 0.15);
+  --shadow-light: rgba(15, 23, 42, 0.05);
+  --text-shadow: rgba(15, 23, 42, 0.3);
+  --impact-bg: rgba(124, 58, 237, 0.08);
+  --impact-border: rgba(124, 58, 237, 0.3);
+  --impact-text: #6d28d9;
 }
 
 html {
