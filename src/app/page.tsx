@@ -1,5 +1,8 @@
 import styles from "./page.module.css";
 import ThemeToggle from "./ThemeToggle";
+import Typewriter from "./Typewriter";
+import TiltCard from "./TiltCard";
+import CommandPalette from "./CommandPalette";
 
 export default function Home() {
   return (
@@ -13,12 +16,16 @@ export default function Home() {
         <ThemeToggle />
       </nav>
 
+      <CommandPalette />
+
       <main className={styles.container}>
         {/* Hero Section */}
         <section id="home" className={styles.hero}>
           <div className={styles.glowBlob}></div>
           <div className={styles.glowBlob2}></div>
-          <div className={styles.heroGreeting}>&gt; whoami</div>
+          <div className={styles.heroGreeting}>
+            <Typewriter text="> fetch profile --user srishti... [OK]" speed={40} />
+          </div>
           <h1 className={styles.heroName}>Srishti Agarwal</h1>
           <h2 className={styles.heroRole}>Founding Engineer &middot; Backend & AI Systems</h2>
           <div className={styles.heroLinks}>
@@ -31,13 +38,15 @@ export default function Home() {
             <a href="https://github.com" target="_blank" rel="noreferrer" className={styles.socialLink}>GitHub</a>
             <span className={styles.dot}>&middot;</span>
             <a href="https://leetcode.com" target="_blank" rel="noreferrer" className={styles.socialLink}>LeetCode</a>
+            <span className={styles.dot}>&middot;</span>
+            <a href="/resume.pdf" download className={styles.downloadBtn}>⬇ Resume</a>
           </div>
         </section>
 
         {/* Summary Section */}
         <section id="summary" className={styles.section}>
           <h2 className={styles.sectionTitle}>summary</h2>
-          <div className={styles.summaryCard}>
+          <TiltCard className={styles.summaryCard}>
             <p className={styles.summaryText}>
               Founding Engineer who designed and built the backend foundation for <strong>GROWTH</strong>: a suite of 6 AI-powered MarTech products. Delivered ad copy generation, creative automation, video production, and campaign management end-to-end. Own full-stack execution from system architecture and API design.
             </p>
@@ -46,55 +55,55 @@ export default function Home() {
               <li>Designed multi-tenant backend architecture supporting 6 independent AI services under a unified platform balancing service isolation, shared infra, and cost efficiency.</li>
               <li>Translated ambiguous product requirements into production-ready AI systems in a 0-to-1 environment.</li>
             </ul>
-          </div>
+          </TiltCard>
         </section>
 
         {/* Skills Section */}
         <section id="skills" className={styles.section}>
           <h2 className={styles.sectionTitle}>skills</h2>
           <div className={styles.grid}>
-            <div className={styles.card}>
+            <TiltCard className={styles.card}>
               <h3 className={styles.cardTitle}>Languages</h3>
               <div className={styles.pills}>
                 {['TypeScript', 'JavaScript', 'Python', 'SQL', 'C/C++'].map(s => <span key={s} className={styles.pill}>{s}</span>)}
               </div>
-            </div>
-            <div className={styles.card}>
+            </TiltCard>
+            <TiltCard className={styles.card}>
               <h3 className={styles.cardTitle}>Backend</h3>
               <div className={styles.pills}>
                 {['Node.js', 'NestJS', 'Express.js', 'FastAPI'].map(s => <span key={s} className={styles.pill}>{s}</span>)}
               </div>
-            </div>
-            <div className={styles.card}>
+            </TiltCard>
+            <TiltCard className={styles.card}>
               <h3 className={styles.cardTitle}>AI / ML</h3>
               <div className={styles.pills}>
                 {['LangChain', 'LangGraph', 'Gemini 2.5 Flash', 'Imagen 3', 'Veo 3', 'Gemini Vision AI', 'XGBoost'].map(s => <span key={s} className={styles.pill}>{s}</span>)}
               </div>
-            </div>
-            <div className={styles.card}>
+            </TiltCard>
+            <TiltCard className={styles.card}>
               <h3 className={styles.cardTitle}>APIs & Integrations</h3>
               <div className={styles.pills}>
                 {['Google Ads API', 'GA4', 'AppsFlyer', 'Google Cloud AI Platform'].map(s => <span key={s} className={styles.pill}>{s}</span>)}
               </div>
-            </div>
-            <div className={styles.card}>
+            </TiltCard>
+            <TiltCard className={styles.card}>
               <h3 className={styles.cardTitle}>Cloud & Infra</h3>
               <div className={styles.pills}>
                 {['AWS (S3, SQS, Lambda, EC2, API Gateway)', 'Docker'].map(s => <span key={s} className={styles.pill}>{s}</span>)}
               </div>
-            </div>
-            <div className={styles.card}>
+            </TiltCard>
+            <TiltCard className={styles.card}>
               <h3 className={styles.cardTitle}>Databases</h3>
               <div className={styles.pills}>
                 {['PostgreSQL', 'MySQL', 'MongoDB'].map(s => <span key={s} className={styles.pill}>{s}</span>)}
               </div>
-            </div>
-            <div className={styles.card}>
+            </TiltCard>
+            <TiltCard className={styles.card}>
               <h3 className={styles.cardTitle}>Core Concepts</h3>
               <div className={styles.pills}>
                 {['System Design (HLD/LLD)', 'Multi-Tenant Architecture', 'Microservices', 'Event-Driven Systems'].map(s => <span key={s} className={styles.pill}>{s}</span>)}
               </div>
-            </div>
+            </TiltCard>
           </div>
         </section>
 
@@ -145,7 +154,7 @@ export default function Home() {
             <a href="https://github.com" target="_blank" rel="noreferrer">github</a>
             <a href="https://linkedin.com" target="_blank" rel="noreferrer">linkedin</a>
           </div>
-          <p>&copy; {new Date().getFullYear()} Srishti Agarwal. Built with Next.js & Vanilla CSS.</p>
+          <p>&copy; {new Date().getFullYear()} Srishti Agarwal. Built with Next.js & Vanilla CSS. Press <kbd style={{background: 'var(--code-bg)', padding: '2px 6px', borderRadius: '4px'}}>Ctrl+K</kbd> for command palette.</p>
         </footer>
       </main>
     </>

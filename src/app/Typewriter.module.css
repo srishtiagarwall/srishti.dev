@@ -1,0 +1,19 @@
+.typewriter {
+  display: inline-block;
+  font-family: var(--font-fira-code);
+  color: var(--accent);
+}
+
+.cursor {
+  display: inline-block;
+  width: 1ch;
+  animation: blink 1s step-start infinite;
+  margin-left: 4px;
+  vertical-align: text-bottom;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
