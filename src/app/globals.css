@@ -10,8 +10,38 @@
   --card-border: rgba(255, 255, 255, 0.05);
   --card-border-hover: rgba(255, 255, 255, 0.15);
   --code-bg: rgba(0, 0, 0, 0.4);
+  --nav-bg: rgba(5, 5, 5, 0.6);
+  --shadow-color: rgba(0, 0, 0, 0.5);
+  --shadow-light: rgba(0, 0, 0, 0.1);
+  --text-shadow: rgba(255, 255, 255, 0.3);
+  --impact-bg: rgba(112, 0, 255, 0.03);
+  --impact-border: rgba(112, 0, 255, 0.2);
+  --impact-text: #a855f7;
   --font-inter: 'Inter', sans-serif;
   --font-fira-code: 'Fira Code', monospace;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: #f8fafc;
+    --foreground: #0f172a;
+    --accent: #0284c7;
+    --accent-secondary: #7c3aed;
+    --accent-glow: rgba(2, 132, 199, 0.15);
+    --secondary-glow: rgba(124, 58, 237, 0.15);
+    --comment: #475569;
+    --card-bg: rgba(255, 255, 255, 0.7);
+    --card-border: rgba(15, 23, 42, 0.08);
+    --card-border-hover: rgba(15, 23, 42, 0.2);
+    --code-bg: rgba(15, 23, 42, 0.05);
+    --nav-bg: rgba(248, 250, 252, 0.8);
+    --shadow-color: rgba(15, 23, 42, 0.15);
+    --shadow-light: rgba(15, 23, 42, 0.05);
+    --text-shadow: rgba(15, 23, 42, 0.3);
+    --impact-bg: rgba(124, 58, 237, 0.08);
+    --impact-border: rgba(124, 58, 237, 0.3);
+    --impact-text: #6d28d9;
+  }
 }
 
 html {
@@ -55,11 +85,18 @@ a:hover {
   color: var(--accent);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-fira-code);
   font-weight: 600;
 }
 
-code, pre, .mono {
+code,
+pre,
+.mono {
   font-family: var(--font-fira-code);
 }
