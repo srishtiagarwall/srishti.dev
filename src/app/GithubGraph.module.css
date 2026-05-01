@@ -21,3 +21,49 @@
   font-style: italic;
   font-family: var(--font-fira-code);
 }
+
+.calHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.calTitle {
+  font-family: var(--font-fira-code);
+  font-size: 0.95rem;
+  color: var(--accent);
+}
+
+.calTotal {
+  font-size: 0.8rem;
+  color: var(--comment);
+  font-family: var(--font-fira-code);
+}
+
+.svgWrapper {
+  overflow-x: auto;
+}
+
+.heatmap {
+  display: block;
+}
+
+.cell {
+  cursor: default;
+  transition: opacity 0.15s;
+}
+
+.cell:hover {
+  opacity: 0.75;
+}
+
+.legend {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-top: 0.75rem;
+  justify-content: flex-end;
+}
