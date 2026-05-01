@@ -1,0 +1,76 @@
+.statsRow {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  margin-bottom: 1.5rem;
+  backdrop-filter: blur(10px);
+  flex-wrap: wrap;
+}
+
+.totalBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 80px;
+}
+
+.totalNum {
+  font-family: var(--font-fira-code);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.totalLabel {
+  font-family: var(--font-fira-code);
+  font-size: 0.75rem;
+  color: var(--comment);
+  margin-top: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  flex: 1;
+  min-width: 200px;
+}
+
+.diffRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.easy   { font-family: var(--font-fira-code); font-size: 0.8rem; color: #22c55e; min-width: 52px; }
+.medium { font-family: var(--font-fira-code); font-size: 0.8rem; color: #f59e0b; min-width: 52px; }
+.hard   { font-family: var(--font-fira-code); font-size: 0.8rem; color: #ef4444; min-width: 52px; }
+
+.bar {
+  flex: 1;
+  height: 6px;
+  background: var(--card-border);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.barFill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 1s ease;
+}
+
+.count {
+  font-family: var(--font-fira-code);
+  font-size: 0.8rem;
+  color: var(--comment);
+  min-width: 28px;
+  text-align: right;
+}

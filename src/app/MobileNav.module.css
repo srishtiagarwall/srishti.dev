@@ -1,0 +1,89 @@
+.mobileNav {
+  display: none;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .mobileNav { display: block; }
+}
+
+.burger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 4px;
+}
+
+.bar, .barTop, .barMid, .barBot {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--foreground);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.barTop {
+  width: 22px;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 2px;
+  transform: translateY(7px) rotate(45deg);
+}
+
+.barMid {
+  width: 22px;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 2px;
+  opacity: 0;
+}
+
+.barBot {
+  width: 22px;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 2px;
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.drawer {
+  position: absolute;
+  top: calc(100% + 1rem);
+  right: 0;
+  background: var(--nav-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  backdrop-filter: blur(12px);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 180px;
+  z-index: 200;
+  animation: slideDown 0.2s ease;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.drawerLink {
+  font-family: var(--font-fira-code);
+  font-size: 0.9rem;
+  color: var(--comment);
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+
+.drawerLink:hover {
+  color: var(--accent);
+  background: var(--card-bg);
+  text-shadow: 0 0 8px var(--accent-glow);
+}

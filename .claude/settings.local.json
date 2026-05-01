@@ -6,7 +6,9 @@
       "Bash(rm *)",
       "Bash(npm search *)",
       "Bash(npm install *)",
-      "Bash(curl -s \"https://leetcode-sub-endpoint.vercel.app/leetcode/SrishtiAgarwal\")"
+      "Bash(curl -s \"https://leetcode-sub-endpoint.vercel.app/leetcode/SrishtiAgarwal\")",
+      "WebFetch(domain:leetcode-stats-api.herokuapp.com)",
+      "WebFetch(domain:alfa-leetcode-api.onrender.com)"
     ]
   }
 }

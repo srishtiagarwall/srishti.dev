@@ -24,6 +24,13 @@
   z-index: 100;
   font-family: var(--font-fira-code);
   font-size: 0.9rem;
+  padding: 0 1.5rem;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }
 
 .navLink {
@@ -341,40 +348,150 @@
   font-size: 1rem;
 }
 
-/* Footer */
-.footer {
-  text-align: center;
-  padding: 4rem 0;
-  border-top: 1px solid var(--card-border);
-  font-family: var(--font-fira-code);
-  color: var(--comment);
+/* Projects */
+.projectGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.projectCard {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-.links {
+.projectCard:hover {
+  border-color: var(--card-border-hover);
+  box-shadow: 0 10px 30px -10px var(--shadow-color), inset 0 0 0 1px var(--accent-glow);
+  transform: translateY(-4px);
+}
+
+.projectHeader {
   display: flex;
-  justify-content: center;
-  gap: 2rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5rem;
 }
 
-.links a {
+.projectTitle {
+  font-family: var(--font-fira-code);
+  font-size: 1rem;
   color: var(--foreground);
+  line-height: 1.4;
 }
 
-.links a:hover {
+.projectLink {
+  font-size: 1.2rem;
   color: var(--accent);
-  text-shadow: 0 0 8px var(--text-shadow);
+  text-decoration: none;
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+
+.projectLink:hover {
+  transform: translate(2px, -2px);
+}
+
+.projectDesc {
+  color: var(--comment);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  flex: 1;
+}
+
+.projectHighlight {
+  font-family: var(--font-fira-code);
+  font-size: 0.78rem;
+  color: var(--accent);
+  background: var(--accent-glow);
+  border: 1px solid var(--accent);
+  border-radius: 20px;
+  padding: 0.25rem 0.75rem;
+  display: inline-block;
+  align-self: flex-start;
+}
+
+/* Contact */
+.contactGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .contactGrid { grid-template-columns: 1fr; }
+}
+
+.contactBlurb {
+  color: var(--comment);
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.contactLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contactLink {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  text-decoration: none;
+  color: var(--foreground);
+  font-family: var(--font-fira-code);
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.contactLink:hover {
+  color: var(--accent);
+}
+
+.contactLinkLabel {
+  font-size: 0.7rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 3rem 0;
+  border-top: 1px solid var(--card-border);
+  font-family: var(--font-fira-code);
+  color: var(--comment);
+  font-size: 0.85rem;
+}
+
+.kbd {
+  background: var(--code-bg);
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: 1px solid var(--card-border);
 }
 
 @media (max-width: 768px) {
   .heroName {
     font-size: 2.5rem;
   }
-  
+
   .nav {
-    gap: 1rem;
-    font-size: 0.8rem;
+    justify-content: space-between;
+  }
+
+  .navLinks {
+    display: none;
   }
 }

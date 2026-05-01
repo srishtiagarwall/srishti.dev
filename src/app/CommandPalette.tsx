@@ -65,7 +65,13 @@ export default function CommandPalette() {
                 <Terminal size={16} className={styles.icon} /> Skills
               </Command.Item>
               <Command.Item onSelect={() => navigateTo("#experience")} className={styles.item}>
-                <FileText size={16} className={styles.icon} /> Experience
+                <Briefcase size={16} className={styles.icon} /> Experience
+              </Command.Item>
+              <Command.Item onSelect={() => navigateTo("#education")} className={styles.item}>
+                <FileText size={16} className={styles.icon} /> Education
+              </Command.Item>
+              <Command.Item onSelect={() => navigateTo("#contact")} className={styles.item}>
+                <Mail size={16} className={styles.icon} /> Contact
               </Command.Item>
             </Command.Group>
 
@@ -79,14 +85,17 @@ export default function CommandPalette() {
             </Command.Group>
 
             <Command.Group heading="Links">
-              <Command.Item onSelect={() => openLink("mailto:hello@srishti.dev")} className={styles.item}>
+              <Command.Item onSelect={() => openLink("mailto:agarwal11srishti@gmail.com")} className={styles.item}>
                 <Mail size={16} className={styles.icon} /> Email Me
               </Command.Item>
-              <Command.Item onSelect={() => openLink("https://github.com")} className={styles.item}>
+              <Command.Item onSelect={() => openLink("https://github.com/SrishtiAgarwal-growthz")} className={styles.item}>
                 <Code size={16} className={styles.icon} /> GitHub
               </Command.Item>
-              <Command.Item onSelect={() => openLink("https://linkedin.com")} className={styles.item}>
+              <Command.Item onSelect={() => openLink("https://linkedin.com/in/srishti-agarwal-sde")} className={styles.item}>
                 <Briefcase size={16} className={styles.icon} /> LinkedIn
+              </Command.Item>
+              <Command.Item onSelect={() => openLink("https://leetcode.com/u/SrishtiAgarwal/")} className={styles.item}>
+                <Terminal size={16} className={styles.icon} /> LeetCode
               </Command.Item>
             </Command.Group>
           </Command.List>
