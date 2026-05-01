@@ -8,7 +8,12 @@
       "Bash(npm install *)",
       "Bash(curl -s \"https://leetcode-sub-endpoint.vercel.app/leetcode/SrishtiAgarwal\")",
       "WebFetch(domain:leetcode-stats-api.herokuapp.com)",
-      "WebFetch(domain:alfa-leetcode-api.onrender.com)"
+      "WebFetch(domain:alfa-leetcode-api.onrender.com)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(pnpm install *)",
+      "Bash(git checkout *)",
+      "Bash(git push *)"
     ]
   }
 }

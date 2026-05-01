@@ -1,0 +1,37 @@
+.debugPanel {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  padding: 10px 15px;
+  font-family: var(--font-fira-code);
+  font-size: 0.75rem;
+  color: var(--accent);
+  z-index: 9999;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 15px var(--shadow-color);
+  pointer-events: none;
+}
+
+.header {
+  color: var(--comment);
+  margin-bottom: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  border-bottom: 1px dashed var(--card-border);
+  padding-bottom: 4px;
+}
+
+.stat {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 4px;
+}
+
+.stat span:last-child {
+  color: var(--foreground);
+}
