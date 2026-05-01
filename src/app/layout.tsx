@@ -14,6 +14,7 @@ const firaCode = Fira_Code({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://srishti.dev"),
   title: "Srishti Agarwal | Founding Engineer",
   description: "Founding Engineer specializing in backend systems and AI/ML integration. Exploring the intersection of multi-tenant microservices and generative AI.",
   openGraph: {

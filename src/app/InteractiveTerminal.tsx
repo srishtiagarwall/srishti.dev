@@ -10,7 +10,7 @@ const fileSystem: Record<string, string> = {
 };
 
 export default function InteractiveTerminal() {
-  const [history, setHistory] = useState<{ id: number; command: string; output: string | JSX.Element }[]>([
+  const [history, setHistory] = useState<{ id: number; command: string; output: string | React.ReactElement }[]>([
     { id: 0, command: "", output: "Welcome to SrishtiOS v1.0.0. Type 'help' to see available commands." }
   ]);
   const [input, setInput] = useState("");
@@ -28,7 +28,7 @@ export default function InteractiveTerminal() {
     const cmd = input.trim();
     if (!cmd) return;
 
-    let output: string | JSX.Element = "";
+    let output: string | React.ReactElement = "";
     const args = cmd.split(" ");
     const mainCommand = args[0].toLowerCase();
 
