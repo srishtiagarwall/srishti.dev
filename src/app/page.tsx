@@ -41,7 +41,7 @@ export default function Home() {
             <span className={styles.dot}>&middot;</span>
             <a href="https://leetcode.com" target="_blank" rel="noreferrer" className={styles.socialLink}>LeetCode</a>
             <span className={styles.dot}>&middot;</span>
-            <a href="/resume.pdf" download className={styles.downloadBtn}>⬇ Resume</a>
+            <a href="/Srishti_Agarwal_Resume.pdf" download className={styles.downloadBtn}>⬇ Resume</a>
           </div>
         </section>
 
