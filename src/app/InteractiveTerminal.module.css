@@ -32,9 +32,9 @@
   display: inline-block;
 }
 
-.macRed { background: #ff5f56; }
+.macRed    { background: #ff5f56; }
 .macYellow { background: #ffbd2e; }
-.macGreen { background: #27c93f; }
+.macGreen  { background: #27c93f; }
 
 .terminalTitle {
   flex-grow: 1;
@@ -54,28 +54,105 @@
   color: var(--foreground);
 }
 
+.commandBlock {
+  margin-bottom: 0.25rem;
+}
+
 .promptLine {
   display: flex;
   gap: 0.75rem;
   margin-bottom: 0.25rem;
+  align-items: baseline;
 }
 
 .prompt {
   color: var(--accent);
   font-weight: 600;
+  white-space: nowrap;
+}
+
+.enteredCmd {
+  color: var(--foreground);
 }
 
 .outputLine {
   color: var(--foreground);
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   white-space: pre-wrap;
   word-wrap: break-word;
-  line-height: 1.5;
+  line-height: 1.6;
+  padding-left: 0;
 }
 
+/* help command */
+.helpGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.helpRow {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.helpCmd {
+  color: var(--accent);
+  min-width: 160px;
+}
+
+.helpDesc {
+  color: var(--comment);
+}
+
+/* ls command */
+.lsOutput {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.lsFile {
+  color: #7dd3fc;
+}
+
+/* skills command */
+.skillsOutput {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.skillRow {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.skillCategory {
+  color: #a855f7;
+  min-width: 110px;
+  font-weight: 600;
+}
+
+.skillValues {
+  color: var(--foreground);
+}
+
+/* error / hint */
+.errorText {
+  color: #f87171;
+}
+
+.helpHint {
+  color: var(--accent);
+}
+
+/* input row */
 .inputForm {
   display: flex;
   gap: 0.75rem;
+  align-items: center;
 }
 
 .input {
@@ -86,22 +163,21 @@
   color: var(--foreground);
   font-family: var(--font-fira-code);
   font-size: 0.9rem;
+  caret-color: var(--accent);
+  caret-shape: block;
+  animation: caretBlink 1s step-start infinite;
 }
 
-/* Scrollbar customization */
-.terminalBody::-webkit-scrollbar {
-  width: 8px;
+@keyframes caretBlink {
+  0%, 100% { caret-color: var(--accent); }
+  50%       { caret-color: transparent; }
 }
 
-.terminalBody::-webkit-scrollbar-track {
-  background: transparent;
-}
-
+/* Scrollbar */
+.terminalBody::-webkit-scrollbar       { width: 8px; }
+.terminalBody::-webkit-scrollbar-track { background: transparent; }
 .terminalBody::-webkit-scrollbar-thumb {
   background: var(--card-border);
   border-radius: 4px;
 }
-
-.terminalBody::-webkit-scrollbar-thumb:hover {
-  background: var(--comment);
-}
+.terminalBody::-webkit-scrollbar-thumb:hover { background: var(--comment); }
