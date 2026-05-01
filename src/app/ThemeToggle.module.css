@@ -11,7 +11,7 @@
   background: transparent;
   border: 1px solid var(--card-border);
   color: var(--comment);
-  font-family: var(--font-fira-code);
+  font-family: var(--font-space-mono);
   font-size: 0.85rem;
   padding: 0.5rem;
   border-radius: 50%;

@@ -19,6 +19,7 @@
   --impact-text: #a855f7;
   --font-inter: 'Inter', sans-serif;
   --font-fira-code: 'Fira Code', monospace;
+  --font-space-mono: 'Space Mono', monospace;
 }
 
 :root[data-theme="light"] {
@@ -58,7 +59,7 @@ body {
   flex-direction: column;
   color: var(--foreground);
   background: var(--background);
-  font-family: var(--font-inter);
+  font-family: var(--font-space-mono);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: 
@@ -89,8 +90,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-fira-code);
-  font-weight: 600;
+  font-family: var(--font-space-mono);
+  font-weight: 700;
 }
 
 code,
