@@ -28,7 +28,7 @@
   justify-content: center;
   transform: translate(-50%, -50%);
   transition: transform 0.1s, opacity 0.3s;
-  opacity: 0.5;
+  opacity: 1;
 }
 
 .webCircle1, .webCircle2, .webCircle3 {
@@ -43,13 +43,13 @@
   width: 30px;
   height: 30px;
   border: 1px solid var(--accent);
-  opacity: 0.3;
+  opacity: 0.7;
 }
 
 .webCircle2 {
   width: 50px;
   height: 50px;
-  opacity: 0.2;
+  opacity: 0.5;
   animation-direction: reverse;
 }
 
@@ -57,7 +57,7 @@
   width: 70px;
   height: 70px;
   border: 1px dotted var(--comment);
-  opacity: 0.1;
+  opacity: 0.35;
   animation-duration: 25s;
 }
 
@@ -67,7 +67,7 @@
 
 .trailPointer .webCircle1 {
   border: 1px solid var(--accent);
-  opacity: 0.8;
+  opacity: 1;
   width: 40px;
   height: 40px;
   box-shadow: inset 0 0 10px var(--accent-glow), 0 0 10px var(--accent-glow);
@@ -76,7 +76,7 @@
 
 .trailPointer .webCircle2 {
   border-color: var(--accent);
-  opacity: 0.4;
+  opacity: 0.7;
   width: 65px;
   height: 65px;
   transition: all 0.3s ease;

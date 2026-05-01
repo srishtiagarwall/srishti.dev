@@ -155,22 +155,47 @@
   align-items: center;
 }
 
-.input {
+.inputWrapper {
+  position: relative;
   flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+.inputMirror {
+  visibility: hidden;
+  white-space: pre;
+  font-family: var(--font-fira-code);
+  font-size: 0.9rem;
+  pointer-events: none;
+}
+
+.cursor {
+  display: inline-block;
+  width: 8px;
+  height: 1.1em;
+  background: var(--accent);
+  vertical-align: text-bottom;
+  animation: blink 0.4s step-start infinite;
+  flex-shrink: 0;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+.input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
   background: transparent;
   border: none;
   outline: none;
   color: var(--foreground);
   font-family: var(--font-fira-code);
   font-size: 0.9rem;
-  caret-color: var(--accent);
-  caret-shape: block;
-  animation: caretBlink 1s step-start infinite;
-}
-
-@keyframes caretBlink {
-  0%, 100% { caret-color: var(--accent); }
-  50%       { caret-color: transparent; }
+  caret-color: transparent;
 }
 
 /* Scrollbar */

@@ -186,18 +186,22 @@ export default function InteractiveTerminal() {
         ))}
         <form onSubmit={handleSubmit} className={styles.inputForm}>
           <span className={styles.prompt}>guest@srishti:~$</span>
-          <input
-            ref={inputRef}
-            type="text"
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            onKeyDown={handleKeyDown}
-            className={styles.input}
-            spellCheck="false"
-            autoComplete="off"
-            autoCorrect="off"
-            autoCapitalize="off"
-          />
+          <div className={styles.inputWrapper}>
+            <span className={styles.inputMirror}>{input}</span>
+            <span className={styles.cursor} />
+            <input
+              ref={inputRef}
+              type="text"
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              onKeyDown={handleKeyDown}
+              className={styles.input}
+              spellCheck="false"
+              autoComplete="off"
+              autoCorrect="off"
+              autoCapitalize="off"
+            />
+          </div>
         </form>
       </div>
     </div>
