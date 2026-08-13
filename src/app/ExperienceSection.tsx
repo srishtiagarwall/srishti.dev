@@ -62,9 +62,9 @@ outputs:
         <div className={styles.timeline}>
           <div className={styles.timelineItem}>
             <h3 className={styles.roleTitle}>Founding Engineer &middot; Full Time</h3>
-            <div className={styles.company}>@ GrowthZ AI &middot; July 2024 - Present</div>
+            <div className={styles.company}>@ <a href="https://www.growthz.ai/" target="_blank" rel="noreferrer" className={styles.companyLink}>GrowthZ AI</a> &middot; July 2024 - Present</div>
             <ul className={styles.bulletList}>
-              <li>Core contributor to GrowthZ.ai: an AI platform that unifies ad creative generation, campaign automation, and performance analytics for B2B clients, from system architecture to production deployment.</li>
+              <li>Core contributor to <a href="https://www.growthz.ai/" target="_blank" rel="noreferrer" className={styles.inlineLink}>GrowthZ.ai</a>: an AI platform that unifies ad creative generation, campaign automation, and performance analytics for B2B clients, from system architecture to production deployment.</li>
               <li>Designed scalable REST APIs across 6 microservices powering a multi-tenant campaign automation engine that auto-generates keywords, ad groups, creatives, and extensions; trained and tuned the LightGBM model driving real-time bid optimization.</li>
               <li>Built an LLM-powered ad copy generation pipeline that scrapes Play Store/App Store/website data, extracts sentiment and themes, and generates structured, keyword-researched ad copies with a RAG workflow, embedding brand content with Gemini embeddings and Google Search grounding for context-aware ad group and phrase generation, producing static, animated, and AI-generated video creatives at sub-60s latency.</li>
               <li>Architected an automated video-to-Meta-ad pipeline for one of India&apos;s largest Meta advertisers, processing ~1,000 video uploads/day across 60+ ad accounts. Moved uploads to direct-to-object-storage streaming, cutting cloud egress costs ~60%.</li>

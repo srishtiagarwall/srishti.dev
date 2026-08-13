@@ -70,7 +70,7 @@ export default function Home() {
             </h1>
             <h2 className={styles.heroRole}>Founding / Senior Software Engineer</h2>
             <p className={styles.heroBody}>
-              I build <strong>backend systems for AI/LLM infrastructure</strong>, with a focus on reliability and safety guardrails for production LLM applications. Core contributor to GrowthZ.ai, where I unify <strong>ad creative generation, campaign automation, and performance analytics</strong> into a single platform for B2B marketing teams. Currently shipping REST APIs, RAG pipelines, and real-time bid optimization.
+              I build <strong>backend systems for AI/LLM infrastructure</strong>, with a focus on reliability and safety guardrails for production LLM applications. Core contributor to <a href="https://www.growthz.ai/" target="_blank" rel="noreferrer" className={styles.inlineLink}>GrowthZ.ai</a>, where I unify <strong>ad creative generation, campaign automation, and performance analytics</strong> into a single platform for B2B marketing teams. Currently shipping REST APIs, RAG pipelines, and real-time bid optimization.
             </p>
             <div className={styles.heroLinks}>
               <a href="mailto:agarwal11srishti@gmail.com" className={styles.socialLink}>Email</a>
@@ -88,7 +88,7 @@ export default function Home() {
           </div>
 
           <aside className={styles.heroSidebar}>
-            <span className={styles.metaLabel}>GrowthZ AI &middot; 2 yrs</span>
+            <span className={styles.metaLabel}><a href="https://www.growthz.ai/" target="_blank" rel="noreferrer" className={styles.inlineLink}>GrowthZ AI</a> &middot; 2 yrs</span>
             <div className={styles.miniTimeline}>
               <div className={styles.miniTimelineItem}>
                 <h4 className={styles.miniRoleTitle}>Software Engineer II</h4>
@@ -118,19 +118,19 @@ export default function Home() {
               <div className={styles.milestoneFlow}>
                 {[
                   [
-                    { range: "Jul 2024 - Oct 2024", name: "Genius" },
-                    { range: "Nov 2024 - Jan 2025", name: "Rainbow" },
-                    { range: "Feb 2025 - Apr 2025", name: "Opus" },
+                    { range: "Jul 2024 - Oct 2024", name: "Genius", desc: "AI ad copies generator" },
+                    { range: "Nov 2024 - Jan 2025", name: "Rainbow", desc: "AI image creatives generator" },
+                    { range: "Feb 2025 - Apr 2025", name: "Opus", desc: "AI video creatives generator" },
                   ],
                   [
-                    { range: "May 2025 - Jul 2025", name: "Wildcard" },
-                    { range: "Jul 2025 - Aug 2025", name: "Google Ads Audit" },
-                    { range: "Sep 2025 - Dec 2025", name: "Thrive" },
+                    { range: "May 2025 - Jul 2025", name: "Wildcard", desc: "Campaign management platform" },
+                    { range: "Jul 2025 - Aug 2025", name: "Google Ads Audit", desc: "Auditing of Google Ads campaigns" },
+                    { range: "Sep 2025 - Dec 2025", name: "Thrive", desc: "Campaign optimization platform" },
                   ],
                   [
-                    { range: "Jan 2026 - Feb 2026", name: "Hawkeye" },
-                    { range: "Mar 2026 - Jun 2026", name: "Multi-Channel Integration" },
-                    { range: "Jul 2026 - Aug 2026", name: "Video-to-Meta-Ad Pipeline" },
+                    { range: "Jan 2026 - Feb 2026", name: "Hawkeye", desc: "Unified reporting across channels" },
+                    { range: "Mar 2026 - Jun 2026", name: "Multi-Channel Integration", desc: "Multi-channel data aggregation across GrowthZ.ai" },
+                    { range: "Jul 2026 - Aug 2026", name: "Video-to-Meta-Ad Pipeline", desc: "Video-to-ad pipeline for Meta's top spenders" },
                   ],
                 ].map((col, i) => (
                   <div key={i} className={styles.milestoneCol}>
@@ -138,6 +138,7 @@ export default function Home() {
                       <div key={m.name} className={styles.milestoneItem}>
                         <span className={styles.milestoneRange}>{m.range}</span>
                         <span className={styles.milestoneName}>{m.name}</span>
+                        <span className={styles.milestoneDesc}>{m.desc}</span>
                       </div>
                     ))}
                   </div>

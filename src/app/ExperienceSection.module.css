@@ -73,6 +73,26 @@
   margin-bottom: 1.5rem;
 }
 
+.companyLink {
+  color: inherit;
+  text-decoration: none;
+}
+
+.companyLink:hover {
+  text-decoration: underline;
+}
+
+.inlineLink {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-underline-offset: 2px;
+}
+
+.inlineLink:hover {
+  color: var(--accent);
+}
+
 .bulletList {
   list-style: none;
   padding-left: 0;
