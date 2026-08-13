@@ -22,8 +22,11 @@
 
 .label {
   font-family: var(--font-fira-code);
-  font-size: 0.8rem;
-  color: var(--accent);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--comment);
 }
 
 .input,
@@ -33,8 +36,8 @@
   border-radius: 8px;
   padding: 0.75rem 1rem;
   color: var(--foreground);
-  font-family: var(--font-fira-code);
-  font-size: 0.9rem;
+  font-family: var(--font-inter);
+  font-size: 0.95rem;
   outline: none;
   transition: border-color 0.2s, box-shadow 0.2s;
   resize: none;
@@ -60,20 +63,22 @@
 
 .btn {
   font-family: var(--font-fira-code);
-  font-size: 0.9rem;
-  background: var(--accent-glow);
-  color: var(--accent);
-  border: 1px solid var(--accent);
-  border-radius: 20px;
-  padding: 0.5rem 1.5rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  background: var(--foreground);
+  color: var(--background);
+  border: 1px solid var(--foreground);
+  border-radius: 4px;
+  padding: 0.75rem 1.5rem;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.25s ease;
 }
 
 .btn:hover:not(:disabled) {
   background: var(--accent);
-  color: var(--background);
-  box-shadow: 0 0 15px var(--accent-glow);
+  border-color: var(--accent);
+  color: #fff;
   transform: translateY(-2px);
 }
 

@@ -61,11 +61,17 @@ export default function CommandPalette() {
               <Command.Item onSelect={() => navigateTo("#summary")} className={styles.item}>
                 <Terminal size={16} className={styles.icon} /> Summary
               </Command.Item>
+              <Command.Item onSelect={() => navigateTo("#experience")} className={styles.item}>
+                <Briefcase size={16} className={styles.icon} /> Experience
+              </Command.Item>
+              <Command.Item onSelect={() => navigateTo("#projects")} className={styles.item}>
+                <Code size={16} className={styles.icon} /> Projects
+              </Command.Item>
               <Command.Item onSelect={() => navigateTo("#skills")} className={styles.item}>
                 <Terminal size={16} className={styles.icon} /> Skills
               </Command.Item>
-              <Command.Item onSelect={() => navigateTo("#experience")} className={styles.item}>
-                <Briefcase size={16} className={styles.icon} /> Experience
+              <Command.Item onSelect={() => navigateTo("#leetcode")} className={styles.item}>
+                <Terminal size={16} className={styles.icon} /> LeetCode
               </Command.Item>
               <Command.Item onSelect={() => navigateTo("#education")} className={styles.item}>
                 <FileText size={16} className={styles.icon} /> Education
@@ -88,10 +94,10 @@ export default function CommandPalette() {
               <Command.Item onSelect={() => openLink("mailto:agarwal11srishti@gmail.com")} className={styles.item}>
                 <Mail size={16} className={styles.icon} /> Email Me
               </Command.Item>
-              <Command.Item onSelect={() => openLink("https://github.com/SrishtiAgarwal-growthz")} className={styles.item}>
+              <Command.Item onSelect={() => openLink("https://github.com/srishtiagarwall")} className={styles.item}>
                 <Code size={16} className={styles.icon} /> GitHub
               </Command.Item>
-              <Command.Item onSelect={() => openLink("https://linkedin.com/in/srishti-agarwal-sde")} className={styles.item}>
+              <Command.Item onSelect={() => openLink("https://www.linkedin.com/in/srishtiagarwal0212/")} className={styles.item}>
                 <Briefcase size={16} className={styles.icon} /> LinkedIn
               </Command.Item>
               <Command.Item onSelect={() => openLink("https://leetcode.com/u/SrishtiAgarwal/")} className={styles.item}>

@@ -21,8 +21,8 @@ export default function TiltCard({ children, className = "" }: TiltCardProps) {
     const centerX = rect.width / 2;
     const centerY = rect.height / 2;
 
-    const rotateXValue = ((y - centerY) / centerY) * -10; // Max rotation 10deg
-    const rotateYValue = ((x - centerX) / centerX) * 10;
+    const rotateXValue = ((y - centerY) / centerY) * -2.5; // subtle tilt for a calmer feel
+    const rotateYValue = ((x - centerX) / centerX) * 2.5;
 
     setRotateX(rotateXValue);
     setRotateY(rotateYValue);
@@ -46,14 +46,14 @@ export default function TiltCard({ children, className = "" }: TiltCardProps) {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       style={{
-        transform: `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(${
-          isHovering ? 1.02 : 1
-        }, ${isHovering ? 1.02 : 1}, 1)`,
-        transition: isHovering ? "transform 0.1s ease-out" : "transform 0.5s ease-out",
+        transform: `perspective(1200px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(${
+          isHovering ? 1.005 : 1
+        }, ${isHovering ? 1.005 : 1}, 1)`,
+        transition: isHovering ? "transform 0.15s ease-out" : "transform 0.4s ease-out",
         transformStyle: "preserve-3d",
       }}
     >
-      <div style={{ transform: "translateZ(20px)" }}>{children}</div>
+      <div style={{ transform: "translateZ(8px)" }}>{children}</div>
     </div>
   );
 }

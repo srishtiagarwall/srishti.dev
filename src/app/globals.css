@@ -1,46 +1,68 @@
 :root {
-  --background: #050505;
-  --foreground: #e2e8f0;
-  --accent: #00f0ff;
-  --accent-secondary: #7000ff;
-  --accent-glow: rgba(0, 240, 255, 0.15);
-  --secondary-glow: rgba(112, 0, 255, 0.15);
-  --comment: #64748b;
-  --card-bg: rgba(255, 255, 255, 0.02);
-  --card-border: rgba(255, 255, 255, 0.05);
-  --card-border-hover: rgba(255, 255, 255, 0.15);
-  --code-bg: rgba(0, 0, 0, 0.4);
-  --nav-bg: rgba(5, 5, 5, 0.97);
-  --shadow-color: rgba(0, 0, 0, 0.5);
-  --shadow-light: rgba(0, 0, 0, 0.1);
-  --text-shadow: rgba(255, 255, 255, 0.3);
-  --impact-bg: rgba(112, 0, 255, 0.03);
-  --impact-border: rgba(112, 0, 255, 0.2);
-  --impact-text: #a855f7;
+  --background: #0f0d0b;
+  --foreground: #f3ede4;
+  --accent: #e2703a;
+  --accent-secondary: #c2531f;
+  --accent-glow: rgba(226, 112, 58, 0.16);
+  --secondary-glow: rgba(194, 83, 31, 0.12);
+  --comment: #a89a8c;
+  --card-bg: rgba(255, 255, 255, 0.035);
+  --card-border: rgba(243, 237, 228, 0.1);
+  --card-border-hover: rgba(243, 237, 228, 0.22);
+  --code-bg: rgba(0, 0, 0, 0.25);
+  --nav-bg: rgba(15, 13, 11, 0.94);
+  --shadow-color: rgba(0, 0, 0, 0.45);
+  --shadow-light: rgba(0, 0, 0, 0.2);
+  --text-shadow: rgba(243, 237, 228, 0.2);
+  --impact-bg: rgba(226, 112, 58, 0.07);
+  --impact-border: rgba(226, 112, 58, 0.25);
+  --impact-text: #e2703a;
   --font-inter: 'Inter', sans-serif;
   --font-fira-code: 'Fira Code', monospace;
   --font-space-mono: 'Space Mono', monospace;
+  --font-fraunces: 'Fraunces', serif;
 }
 
 :root[data-theme="light"] {
-  --background: #f8fafc;
-  --foreground: #0f172a;
-  --accent: #0284c7;
-  --accent-secondary: #7c3aed;
-  --accent-glow: rgba(2, 132, 199, 0.15);
-  --secondary-glow: rgba(124, 58, 237, 0.15);
-  --comment: #475569;
-  --card-bg: rgba(255, 255, 255, 0.7);
-  --card-border: rgba(15, 23, 42, 0.08);
-  --card-border-hover: rgba(15, 23, 42, 0.2);
-  --code-bg: rgba(15, 23, 42, 0.05);
-  --nav-bg: rgba(248, 250, 252, 0.98);
-  --shadow-color: rgba(15, 23, 42, 0.15);
-  --shadow-light: rgba(15, 23, 42, 0.05);
-  --text-shadow: rgba(15, 23, 42, 0.3);
-  --impact-bg: rgba(124, 58, 237, 0.08);
-  --impact-border: rgba(124, 58, 237, 0.3);
-  --impact-text: #6d28d9;
+  --background: #faf6ee;
+  --foreground: #221d17;
+  --accent: #c2531f;
+  --accent-secondary: #a3441a;
+  --accent-glow: rgba(194, 83, 31, 0.12);
+  --secondary-glow: rgba(194, 83, 31, 0.07);
+  --comment: #6b6156;
+  --card-bg: rgba(255, 255, 255, 0.6);
+  --card-border: rgba(34, 29, 23, 0.1);
+  --card-border-hover: rgba(34, 29, 23, 0.22);
+  --code-bg: rgba(34, 29, 23, 0.045);
+  --nav-bg: rgba(250, 246, 238, 0.92);
+  --shadow-color: rgba(34, 29, 23, 0.12);
+  --shadow-light: rgba(34, 29, 23, 0.05);
+  --text-shadow: rgba(34, 29, 23, 0.15);
+  --impact-bg: rgba(194, 83, 31, 0.06);
+  --impact-border: rgba(194, 83, 31, 0.25);
+  --impact-text: #a3441a;
+}
+
+:root[data-theme="dark"] {
+  --background: #0f0d0b;
+  --foreground: #f3ede4;
+  --accent: #e2703a;
+  --accent-secondary: #c2531f;
+  --accent-glow: rgba(226, 112, 58, 0.16);
+  --secondary-glow: rgba(194, 83, 31, 0.12);
+  --comment: #a89a8c;
+  --card-bg: rgba(255, 255, 255, 0.035);
+  --card-border: rgba(243, 237, 228, 0.1);
+  --card-border-hover: rgba(243, 237, 228, 0.22);
+  --code-bg: rgba(0, 0, 0, 0.25);
+  --nav-bg: rgba(15, 13, 11, 0.94);
+  --shadow-color: rgba(0, 0, 0, 0.45);
+  --shadow-light: rgba(0, 0, 0, 0.2);
+  --text-shadow: rgba(243, 237, 228, 0.2);
+  --impact-bg: rgba(226, 112, 58, 0.07);
+  --impact-border: rgba(226, 112, 58, 0.25);
+  --impact-text: #e2703a;
 }
 
 html {
@@ -59,13 +81,14 @@ body {
   flex-direction: column;
   color: var(--foreground);
   background: var(--background);
-  font-family: var(--font-space-mono);
+  font-family: var(--font-inter);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: 
-    radial-gradient(circle at 15% 50%, var(--secondary-glow), transparent 25%),
-    radial-gradient(circle at 85% 30%, var(--accent-glow), transparent 25%);
+  background-image:
+    radial-gradient(circle at 15% 0%, var(--secondary-glow), transparent 35%),
+    radial-gradient(circle at 85% 15%, var(--accent-glow), transparent 30%);
   background-attachment: fixed;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 * {
@@ -90,8 +113,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-space-mono);
-  font-weight: 700;
+  font-family: var(--font-fraunces);
+  font-weight: 600;
 }
 
 code,

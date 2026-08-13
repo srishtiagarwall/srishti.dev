@@ -6,20 +6,19 @@
   margin: 2rem 0;
   backdrop-filter: blur(10px);
   overflow-x: auto;
-  transition: all 0.3s ease;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .graphContainer:hover {
   border-color: var(--card-border-hover);
-  box-shadow: 0 10px 40px -10px var(--shadow-color), inset 0 0 0 1px var(--accent-glow);
+  box-shadow: 0 10px 40px -10px var(--shadow-color);
 }
 
 .note {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   color: var(--comment);
   margin-top: 1rem;
-  font-style: italic;
-  font-family: var(--font-fira-code);
+  font-family: var(--font-inter);
 }
 
 .calHeader {
@@ -33,8 +32,11 @@
 
 .calTitle {
   font-family: var(--font-fira-code);
-  font-size: 0.95rem;
-  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--comment);
 }
 
 .calTotal {

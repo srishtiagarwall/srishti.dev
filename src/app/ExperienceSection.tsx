@@ -19,20 +19,27 @@ resources:
     type: aws.lambda
     properties:
       runtime: python3.9
-      models: [XGBoost, GeminiVision]
+      models: [LightGBM, GeminiVision, RAG]
       throughput: "high"
+
+  - name: video-ad-pipeline
+    type: object-storage.stream
+    properties:
+      uploads_per_day: 1000
+      ad_accounts: "60+"
+      egress_cost_reduction: "60%"
 
   - name: core-microservices
     type: docker.container
     properties:
       framework: NestJS
-      auth: JWT_RBAC
+      count: 6
       multi_tenant: true
-      incidents_reduced: "95%"
 
 outputs:
-  uptime: "99.9%"
-  client_onboarding_time_reduction: "60%"`;
+  uptime: "99%"
+  infra_cost_reduction: "30%"
+  audit_time_reduction: "3-4hrs -> <3min"`;
 
   return (
     <div className={styles.container}>
@@ -54,23 +61,18 @@ outputs:
       {viewMode === "human" ? (
         <div className={styles.timeline}>
           <div className={styles.timelineItem}>
-            <h3 className={styles.roleTitle}>Founding Engineer - Backend & AI Systems</h3>
-            <div className={styles.company}>@ GrowthZ AI, Gurugram, India &middot; July 2024 - Present</div>
+            <h3 className={styles.roleTitle}>Founding Engineer &middot; Full Time</h3>
+            <div className={styles.company}>@ GrowthZ AI &middot; July 2024 - Present</div>
             <ul className={styles.bulletList}>
-              <li>Engineered an AI-powered ad copy and creative generation platform ingesting Play Store / App Store / website reviews to identify sentiment and themes, producing optimized ad copies with integrated keyword research, and generating static, animated, and video ad creatives delivering production-ready assets at sub-60s latency.</li>
-              <li>Designed an end-to-end campaign automation and optimization engine auto-generating keywords, ad groups, match types, assets, and extensions via Google Ads API from a single URL input, and running real-time bid and structure adjustments using XG Boost-based ML models on live campaigns.</li>
-              <li>Engineered a unified performance analytics layer aggregating multi-platform data, computing performance signals, and surfacing real-time insights across campaign creation, tracking, and optimization services through a single marketing dashboard.</li>
-              <li>Engineered modular NestJS microservices with RBAC, JWT auth, and multi-tenant architecture reducing unauthorized access incidents by 95% and cutting client onboarding time by 60%.</li>
-              <li>Maintained scalable cloud infrastructure using Docker, AWS (S3, SQS, Lambda), and Pulumi (IaC) achieving 99.9% uptime and reducing deployment errors by 80%.</li>
-              <li>Integrated GA4 and AppsFlyer for unified attribution and reporting pipelines, ensuring consistent data flow.</li>
+              <li>Core contributor to GrowthZ.ai: an AI platform that unifies ad creative generation, campaign automation, and performance analytics for B2B clients, from system architecture to production deployment.</li>
+              <li>Designed scalable REST APIs across 6 microservices powering a multi-tenant campaign automation engine that auto-generates keywords, ad groups, creatives, and extensions; trained and tuned the LightGBM model driving real-time bid optimization.</li>
+              <li>Built an LLM-powered ad copy generation pipeline that scrapes Play Store/App Store/website data, extracts sentiment and themes, and generates structured, keyword-researched ad copies with a RAG workflow, embedding brand content with Gemini embeddings and Google Search grounding for context-aware ad group and phrase generation, producing static, animated, and AI-generated video creatives at sub-60s latency.</li>
+              <li>Architected an automated video-to-Meta-ad pipeline for one of India&apos;s largest Meta advertisers, processing ~1,000 video uploads/day across 60+ ad accounts. Moved uploads to direct-to-object-storage streaming, cutting cloud egress costs ~60%.</li>
+              <li>Maintained AWS infrastructure with Docker and Pulumi (IaC), cutting costs 30% via NAT optimization, resource rightsizing, and scheduled shutdowns, while sustaining 99% uptime.</li>
+              <li>Built a performance analytics layer aggregating multi-platform campaign data into a unified marketing dashboard, surfacing real-time performance signals to the marketing team.</li>
+              <li>Designed and built Creative Suite, an AI ad-copy-to-creative generator, as sole engineer end-to-end. Adopted by 9 clients within 3 months, opening a new monetization channel. Recognized as Top Performer for 3 consecutive months (140% of quarterly variable).</li>
+              <li>Independently built a Google Ads audit service running performance & hygiene checks across account categories, cutting manual audit time from 3-4 hours to under 3 minutes per account, accelerating client onboarding.</li>
             </ul>
-            <div className={styles.impactBox}>
-              <h4 className={styles.impactTitle}>Impact</h4>
-              <ul className={styles.bulletList}>
-                <li>Independently built one of six beta products that opened a new monetization channel within three months of joining achieved 140% of quarterly variable & recognized as Top Performer for three consecutive months.</li>
-                <li>Awarded Emerging Leader Excellence Award for cross-functional ownership, removing technical blockers, and driving predictable delivery timelines across product milestones.</li>
-              </ul>
-            </div>
           </div>
         </div>
       ) : (

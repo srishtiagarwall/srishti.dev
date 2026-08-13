@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
-import { Inter, Fira_Code, Space_Mono } from "next/font/google";
+import { Inter, Fira_Code, Space_Mono, Fraunces } from "next/font/google";
 import "./globals.css";
-import DevCursor from "./DevCursor";
 import DebugOverlay from "./DebugOverlay";
-import EasterEgg from "./EasterEgg";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -19,6 +17,12 @@ const spaceMono = Space_Mono({
   weight: ['400', '700'],
   variable: "--font-space-mono",
   subsets: ["latin"],
+});
+
+const fraunces = Fraunces({
+  variable: "--font-fraunces",
+  subsets: ["latin"],
+  axes: ["opsz", "SOFT"],
 });
 
 export const metadata: Metadata = {
@@ -54,11 +58,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${firaCode.variable} ${spaceMono.variable}`}>
+    <html lang="en" className={`${inter.variable} ${firaCode.variable} ${spaceMono.variable} ${fraunces.variable}`} data-theme="light">
       <body>
-        <DevCursor />
         <DebugOverlay />
-        <EasterEgg />
         {children}
       </body>
     </html>

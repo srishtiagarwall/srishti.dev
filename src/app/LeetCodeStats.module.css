@@ -19,20 +19,21 @@
 }
 
 .totalNum {
-  font-family: var(--font-fira-code);
+  font-family: var(--font-fraunces);
   font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--accent);
+  font-weight: 560;
+  color: var(--foreground);
   line-height: 1;
 }
 
 .totalLabel {
   font-family: var(--font-fira-code);
-  font-size: 0.75rem;
+  font-size: 0.7rem;
+  font-weight: 700;
   color: var(--comment);
-  margin-top: 0.25rem;
+  margin-top: 0.35rem;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
 }
 
 .breakdown {
@@ -49,9 +50,9 @@
   gap: 0.75rem;
 }
 
-.easy   { font-family: var(--font-fira-code); font-size: 0.8rem; color: #22c55e; min-width: 52px; }
-.medium { font-family: var(--font-fira-code); font-size: 0.8rem; color: #f59e0b; min-width: 52px; }
-.hard   { font-family: var(--font-fira-code); font-size: 0.8rem; color: #ef4444; min-width: 52px; }
+.easy   { font-family: var(--font-fira-code); font-size: 0.78rem; color: var(--comment); min-width: 52px; }
+.medium { font-family: var(--font-fira-code); font-size: 0.78rem; color: var(--comment); min-width: 52px; }
+.hard   { font-family: var(--font-fira-code); font-size: 0.78rem; color: var(--comment); min-width: 52px; }
 
 .bar {
   flex: 1;

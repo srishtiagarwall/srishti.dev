@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import styles from "./FadeIn.module.css";
 
-export default function FadeIn({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
+export default function FadeIn({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
 
@@ -20,7 +20,7 @@ export default function FadeIn({ children, delay = 0 }: { children: React.ReactN
   return (
     <div
       ref={ref}
-      className={styles.fadeIn}
+      className={`${styles.fadeIn} ${className}`}
       style={{
         opacity: visible ? 1 : 0,
         transform: visible ? "translateY(0)" : "translateY(24px)",

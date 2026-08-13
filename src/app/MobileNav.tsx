@@ -5,8 +5,10 @@ import styles from "./MobileNav.module.css";
 const links = [
   { label: "home", href: "#home" },
   { label: "summary", href: "#summary" },
-  { label: "skills", href: "#skills" },
   { label: "experience", href: "#experience" },
+  { label: "projects", href: "#projects" },
+  { label: "skills", href: "#skills" },
+  { label: "leetcode", href: "#leetcode" },
   { label: "education", href: "#education" },
   { label: "contact", href: "#contact" },
 ];

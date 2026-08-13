@@ -5,11 +5,11 @@ import { useEffect, useState } from "react";
 type SubmissionMap = Record<string, number>;
 
 function getColor(count: number, theme: "light" | "dark"): string {
-  if (count === 0) return theme === "light" ? "#ebedf0" : "#161b22";
-  if (count <= 2) return "#d8b4fe";
-  if (count <= 5) return "#a855f7";
-  if (count <= 9) return "#7c3aed";
-  return "#4c1d95";
+  if (count === 0) return theme === "light" ? "#ece4d6" : "#221c15";
+  if (count <= 2) return "#f0c4a8";
+  if (count <= 5) return "#e2703a";
+  if (count <= 9) return "#c2531f";
+  return "#7a3312";
 }
 
 function buildWeeks(data: SubmissionMap): { date: string; count: number }[][] {
@@ -112,7 +112,7 @@ export default function GithubGraph() {
               x={32 + col * step}
               y={10}
               fontSize={10}
-              fill={theme === "light" ? "#57606a" : "#8b949e"}
+              fill={theme === "light" ? "#6b6156" : "#a89a8c"}
             >
               {label}
             </text>
@@ -124,7 +124,7 @@ export default function GithubGraph() {
               x={0}
               y={20 + d * step + cellSize * 0.8}
               fontSize={10}
-              fill={theme === "light" ? "#57606a" : "#8b949e"}
+              fill={theme === "light" ? "#6b6156" : "#a89a8c"}
             >
               {DAYS[d]}
             </text>
@@ -149,7 +149,7 @@ export default function GithubGraph() {
         </svg>
       </div>
       <div className={styles.legend}>
-        <span style={{ color: theme === "light" ? "#57606a" : "#8b949e", fontSize: 11 }}>Less</span>
+        <span style={{ color: theme === "light" ? "#6b6156" : "#a89a8c", fontSize: 11 }}>Less</span>
         {[0, 1, 4, 8, 14].map((n) => (
           <rect
             key={n}
@@ -163,7 +163,7 @@ export default function GithubGraph() {
             }}
           />
         ))}
-        <span style={{ color: theme === "light" ? "#57606a" : "#8b949e", fontSize: 11 }}>More</span>
+        <span style={{ color: theme === "light" ? "#6b6156" : "#a89a8c", fontSize: 11 }}>More</span>
       </div>
     </div>
   );

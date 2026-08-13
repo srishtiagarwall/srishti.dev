@@ -15,9 +15,9 @@
 }
 
 .dialog {
-  background: var(--card-bg);
+  background: var(--background);
   border: 1px solid var(--card-border);
-  box-shadow: 0 16px 70px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 16px 70px var(--shadow-color);
   border-radius: 12px;
   width: 100%;
   max-width: 640px;
@@ -53,11 +53,12 @@
 /* Cmdk Group Styles */
 .list :global([cmdk-group-heading]) {
   padding: 0.5rem 1rem;
-  font-size: 0.75rem;
+  font-family: var(--font-fira-code);
+  font-size: 0.7rem;
   color: var(--comment);
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.1em;
   margin-top: 0.5rem;
 }
 
