@@ -21,7 +21,7 @@ const projects = [
       "Implemented provider fallback with per-provider circuit breakers, measured at p50 ~29ms / p95 ~46ms gateway overhead under load.",
     ],
     tech: ["NestJS", "TypeScript", "Gemini", "Redis", "PostgreSQL", "SQS"],
-    link: null,
+    link: "https://llm-sentinel-dashboard.onrender.com/",
     highlight: "Live",
   },
   {
@@ -33,7 +33,7 @@ const projects = [
       "Streamed live transcription job status via Server-Sent Events, with each pipeline stage degrading gracefully when its provider dependency is unavailable.",
     ],
     tech: ["FastAPI (Python)", "Next.js", "Gemini", "WebRTC VAD"],
-    link: null,
+    link: "https://callsense-ai-rqmp.onrender.com/",
     highlight: "Live",
   },
 ];
@@ -70,7 +70,7 @@ export default function Home() {
             </h1>
             <h2 className={styles.heroRole}>Founding / Senior Software Engineer</h2>
             <p className={styles.heroBody}>
-              I build <strong>backend systems for AI/LLM infrastructure</strong> i.e. I make sure the robots don&apos;t say anything that gets us sued. Core contributor to GrowthZ.ai, where I unify <strong>ad creative generation, campaign automation, and performance analytics</strong> for B2B clients so marketers can pretend they didn&apos;t need a marketer. Currently shipping REST APIs, RAG pipelines, and real-time bid optimization.
+              I build <strong>backend systems for AI/LLM infrastructure</strong>, with a focus on reliability and safety guardrails for production LLM applications. Core contributor to GrowthZ.ai, where I unify <strong>ad creative generation, campaign automation, and performance analytics</strong> into a single platform for B2B marketing teams. Currently shipping REST APIs, RAG pipelines, and real-time bid optimization.
             </p>
             <div className={styles.heroLinks}>
               <a href="mailto:agarwal11srishti@gmail.com" className={styles.socialLink}>Email</a>
@@ -167,7 +167,18 @@ export default function Home() {
                       <span className={styles.projectTitle}>{project.title}</span>
                       <span className={styles.projectSubtitle}>{project.subtitle}</span>
                     </div>
-                    <span className={styles.projectHighlight}>{project.highlight}</span>
+                    {project.link ? (
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noreferrer"
+                        className={styles.projectHighlight}
+                      >
+                        {project.highlight} ↗
+                      </a>
+                    ) : (
+                      <span className={styles.projectHighlight}>{project.highlight}</span>
+                    )}
                   </div>
                   <ul className={styles.projectPoints}>
                     {project.points.map((p) => <li key={p}>{p}</li>)}
@@ -189,7 +200,7 @@ export default function Home() {
               { title: "Languages", items: ["TypeScript", "JavaScript", "Python", "SQL", "C++"], span: "left-a" },
               { title: "AI / ML", items: ["LangChain", "LangGraph", "Gemini Vision AI", "RAG", "LLM-as-Judge Evaluation", "Gemini 2.5 Flash", "Embeddings", "Imagen 3", "Veo 3"], span: "right-a" },
               { title: "Frameworks & Libraries", items: ["Node.js", "NestJS", "Express.js", "FastAPI"], span: "left-b" },
-              { title: "Databases & Systems", items: ["PostgreSQL", "MongoDB", "MySQL", "System Design (HLD/LLD)", "DSA", "Microservices", "Git"], span: "right-b" },
+              { title: "Databases & Systems", items: ["PostgreSQL", "MongoDB", "MySQL", "DuckDB", "System Design (HLD/LLD)", "DSA", "Microservices", "Git"], span: "right-b" },
               { title: "Infra & Cloud", items: ["AWS (S3, SQS, Lambda, EC2, API Gateway)", "GCP (Cloud Run, Cloud SQL)", "Cloudflare R2", "Docker", "Pulumi (IaC)"], span: "left-c" },
             ].map(({ title, items, span }, i) => (
               <FadeIn key={title} delay={i * 60} className={styles[span]}>
