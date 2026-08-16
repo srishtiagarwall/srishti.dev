@@ -68,7 +68,7 @@ export default function Home() {
               <span className={styles.heroNameStrong}>Srishti</span>
               <span className={styles.heroNameLight}>Agarwal</span>
             </h1>
-            <h2 className={styles.heroRole}>Founding / Senior Software Engineer</h2>
+            <h2 className={styles.heroRole}>Founding / Software Engineer II</h2>
             <p className={styles.heroBody}>
               I build <strong>backend systems for AI/LLM infrastructure</strong>, with a focus on reliability and safety guardrails for production LLM applications. Core contributor to <a href="https://www.growthz.ai/" target="_blank" rel="noreferrer" className={styles.inlineLink}>GrowthZ.ai</a>, where I unify <strong>ad creative generation, campaign automation, and performance analytics</strong> into a single platform for B2B marketing teams. Currently shipping REST APIs, RAG pipelines, and real-time bid optimization.
             </p>
