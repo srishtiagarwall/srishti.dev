@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Fira_Code, Space_Mono, Fraunces } from "next/font/google";
 import "./globals.css";
-import DebugOverlay from "./DebugOverlay";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -60,7 +59,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${firaCode.variable} ${spaceMono.variable} ${fraunces.variable}`} data-theme="light">
       <body>
-        <DebugOverlay />
         {children}
       </body>
     </html>

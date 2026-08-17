@@ -85,12 +85,14 @@
   align-items: start;
   padding-top: 3rem;
   position: relative;
+  min-width: 0;
 }
 
 .heroMain {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  min-width: 0;
 }
 
 .heroName {
