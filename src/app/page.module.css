@@ -690,7 +690,7 @@ a.projectHighlight:hover {
 @media (max-width: 768px) {
   .milestoneFlow {
     grid-template-columns: 1fr;
-    gap: 0;
+    gap: 1.75rem 0;
   }
 
   .heroName {
