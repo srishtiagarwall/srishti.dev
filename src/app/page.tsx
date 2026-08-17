@@ -164,7 +164,7 @@ export default function Home() {
               <FadeIn key={project.title} delay={i * 80}>
                 <TiltCard className={styles.projectCard}>
                   <div className={styles.projectHeader}>
-                    <div>
+                    <div className={styles.projectHeaderText}>
                       <span className={styles.projectTitle}>{project.title}</span>
                       <span className={styles.projectSubtitle}>{project.subtitle}</span>
                     </div>

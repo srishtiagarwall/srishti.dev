@@ -160,3 +160,10 @@
   line-height: 1.6;
   color: var(--foreground);
 }
+
+@media (max-width: 768px) {
+  .codeBlock {
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+}
