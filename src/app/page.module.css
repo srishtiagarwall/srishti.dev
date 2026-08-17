@@ -695,6 +695,10 @@ a.projectHighlight:hover {
     font-size: 3rem;
   }
 
+  .heroBody {
+    max-width: 100%;
+  }
+
   .nav {
     justify-content: space-between;
   }
